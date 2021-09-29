@@ -1,0 +1,1683 @@
+{
+  "paper": {
+    "name": "A4",
+    "leftMargin": 0.5,
+    "rightMargin": 0.5,
+    "topMargin": 0.5,
+    "bottomMargin": 0.5,
+    "isPortriat": true
+  },
+  "modelVersion": 2.01,
+  "defaultSchema": "Default",
+  "server": {
+    "objectType": "Server_SQLITE",
+    "name": "Default",
+    "serverVersion": 3000000,
+    "edition": "Default",
+    "schemas": [
+      {
+        "objectType": "Schema_SQLITE",
+        "name": "Default",
+        "tables": [],
+        "views": []
+      },
+      {
+        "objectType": "Schema_SQLITE",
+        "name": "main",
+        "tables": [
+          {
+            "objectType": "Table_SQLITE",
+            "name": "geo_mun",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "geo_mun",
+            "rootPage": 5,
+            "sql": "CREATE TABLE \"geo_mun\" (\n\t\"cd_municipio\"\tINTEGER,\n\t\"nm_municipio\"\tTEXT,\n\t\"sg_uf\"\tTEXT,\n\t\"nm_uf\"\tTEXT,\n\t\"nm_regiao\"\tTEXT,\n\t\"id_mercado_relevante\"\tINTEGER,\n\t\"nm_mercado_relevante\"\tTEXT,\n\tPRIMARY KEY(\"cd_municipio\")\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_municipio",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_municipio"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "nm_municipio",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "nm_municipio"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "sg_uf",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "sg_uf"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "nm_uf",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "nm_uf"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "nm_regiao",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "nm_regiao"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "id_mercado_relevante",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "id_mercado_relevante"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "nm_mercado_relevante",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "nm_mercado_relevante"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "cd_municipio"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_geo_mun_nt_geo_mun_1",
+                "fields": [
+                  "cd_municipio"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_geo_mun",
+                "referencedFields": [
+                  "cd_municipio"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              }
+            ],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt",
+            "rootPage": 6,
+            "sql": "CREATE TABLE \"nt\" (\n\t\"cd_nota\"\tINTEGER,\n\t\"dt_ntrp\"\tTEXT,\n\t\"id_abrg\"\tINTEGER,\n\tPRIMARY KEY(\"cd_nota\")\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "dt_ntrp",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "dt_ntrp"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "id_abrg",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "id_abrg"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "cd_nota"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_nt_nt_geo_mun_1",
+                "fields": [
+                  "cd_nota"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_geo_mun",
+                "referencedFields": [
+                  "cd_nota"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_nt_nt_geo_uf_1",
+                "fields": [
+                  "cd_nota"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_geo_uf",
+                "referencedFields": [
+                  "cd_nota"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_nt_nt_vc_mes_1",
+                "fields": [
+                  "cd_nota"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_vc_mes",
+                "referencedFields": [
+                  "cd_nota"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_nt_nt_vc_1",
+                "fields": [
+                  "cd_nota"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_vc",
+                "referencedFields": [
+                  "cd_nota"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "OneOrManyRelationship",
+                "oldName": ""
+              }
+            ],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt_geo_mun",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt_geo_mun",
+            "rootPage": 8,
+            "sql": "CREATE TABLE \"nt_geo_mun\" (\n\t\"cd_nota\"\tINTEGER,\n\t\"cd_municipio\"\tINTEGER,\n\tPRIMARY KEY(\"cd_nota\",\"cd_municipio\")\n)",
+            "hasIndexes": true,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_municipio",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_municipio"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "cd_nota",
+                "cd_municipio"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt_vc",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt_vc",
+            "rootPage": 10,
+            "sql": "CREATE TABLE \"nt_vc\" (\n\t\"cd_nota\"\tINTEGER,\n\t\"cd_faixa_etaria\"\tINTEGER,\n\t\"faixa_etaria\"\tTEXT,\n\t\"carreg_total\"\tREAL,\n\t\"carreg_adm\"\tREAL,\n\t\"carreg_com\"\tREAL,\n\t\"carreg_lucro\"\tREAL,\n\t\"vl_coml_menl\"\tREAL,\n\t\"vl_coml_min\"\tREAL,\n\t\"vl_coml_max\"\tREAL,\n\tPRIMARY KEY(\"cd_nota\",\"cd_faixa_etaria\")\n)",
+            "hasIndexes": true,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_faixa_etaria",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_faixa_etaria"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "faixa_etaria",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "faixa_etaria"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "carreg_total",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "carreg_total"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "carreg_adm",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "carreg_adm"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "carreg_com",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "carreg_com"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "carreg_lucro",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "carreg_lucro"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "vl_coml_menl",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "vl_coml_menl"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "vl_coml_min",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "vl_coml_min"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "vl_coml_max",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "vl_coml_max"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "cd_nota",
+                "cd_faixa_etaria"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_nt_vc_nt_despesa_1",
+                "fields": [
+                  "cd_nota"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_despesa",
+                "referencedFields": [
+                  "cd_nota"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              }
+            ],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "rps_cadop",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "rps_cadop",
+            "rootPage": 12,
+            "sql": "CREATE TABLE \"rps_cadop\" (\n\t\"id_plano\"\tINTEGER,\n\t\"cd_plano\"\tINTEGER,\n\t\"cd_operadora\"\tINTEGER,\n\t\"razao_social\"\tTEXT,\n\t\"gr_modalidade\"\tTEXT,\n\t\"porte_operadora\"\tTEXT,\n\t\"vigencia_plano\"\tTEXT,\n\t\"gr_contratacao\"\tTEXT,\n\t\"gr_sgmt_assistencial\"\tTEXT,\n\t\"lg_odontologico\"\tINTEGER,\n\t\"obstetricia\"\tTEXT,\n\t\"cobertura\"\tTEXT,\n\t\"tipo_financiamento\"\tTEXT,\n\t\"abrangencia_cobertura\"\tTEXT,\n\t\"fator_moderador\"\tTEXT,\n\t\"acomodacao_hospitalar\"\tTEXT,\n\t\"livre_escolha\"\tTEXT,\n\tPRIMARY KEY(\"id_plano\")\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "id_plano",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "id_plano"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_plano",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_plano"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_operadora",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_operadora"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "razao_social",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "razao_social"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "gr_modalidade",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "gr_modalidade"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "porte_operadora",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "porte_operadora"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "vigencia_plano",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "vigencia_plano"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "gr_contratacao",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "gr_contratacao"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "gr_sgmt_assistencial",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "gr_sgmt_assistencial"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "lg_odontologico",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "lg_odontologico"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "obstetricia",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "obstetricia"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cobertura",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cobertura"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "tipo_financiamento",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "tipo_financiamento"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "abrangencia_cobertura",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "abrangencia_cobertura"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "fator_moderador",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "fator_moderador"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "acomodacao_hospitalar",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "acomodacao_hospitalar"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "livre_escolha",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "livre_escolha"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "id_plano"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_rps_cadop_nt_vc_mes_1",
+                "fields": [
+                  "id_plano"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_vc_mes",
+                "referencedFields": [
+                  "id_plano"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              }
+            ],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt_despesa",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt_despesa",
+            "rootPage": 7,
+            "sql": "CREATE TABLE \"nt_despesa\" (\n\t\"cd_nota\"\tINTEGER,\n\t\"item_desp\"\tTEXT,\n\t\"cd_faixa_etaria\"\tINTEGER,\n\t\"faixa_etaria\"\tREAL,\n\t\"freq_mes\"\tREAL,\n\t\"custo_evento\"\tREAL,\n\t\"custo_exposto\"\tREAL\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "item_desp",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "item_desp"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_faixa_etaria",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_faixa_etaria"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "faixa_etaria",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "faixa_etaria"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "freq_mes",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "freq_mes"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "custo_evento",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "custo_evento"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "custo_exposto",
+                "type": "REAL",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "custo_exposto"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "cd_nota",
+                "item_desp",
+                "cd_faixa_etaria"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt_geo_uf",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt_geo_uf",
+            "rootPage": 3,
+            "sql": "CREATE TABLE \"nt_geo_uf\" (\n\t\"cd_nota\"\tINTEGER,\n\t\"sg_uf\"\tTEXT\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "sg_uf",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "sg_uf"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "cd_nota",
+                "sg_uf"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt_despesa_mes",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt_despesa_mes",
+            "rootPage": 2,
+            "sql": "CREATE TABLE \"nt_despesa_mes\" (\n\t\"id_plano\"\tINTEGER,\n\t\"cd_nota\"\tINTEGER,\n\t\"ano_mes\"\tTEXT,\n\t\"item_desp\"\tTEXT,\n\t\"lg_outlier\"\tINTEGER\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "id_plano",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "id_plano"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "ano_mes",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "ano_mes"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "item_desp",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "item_desp"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "lg_outlier",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "lg_outlier"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "id_plano",
+                "cd_nota",
+                "ano_mes",
+                "item_desp"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          },
+          {
+            "objectType": "Table_SQLITE",
+            "name": "nt_vc_mes",
+            "autoIncrement": -1,
+            "isWithoutRowID": false,
+            "oldName": "nt_vc_mes",
+            "rootPage": 4,
+            "sql": "CREATE TABLE \"nt_vc_mes\" (\n\t\"id_plano\"\tINTEGER,\n\t\"cd_nota\"\tINTEGER,\n\t\"ano_mes\"\tTEXT,\n\t\"lg_outliervc\"\tINTEGER\n)",
+            "hasIndexes": false,
+            "hasTriggers": false,
+            "hasAutoIncrementInDB": false,
+            "fields": [
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "id_plano",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "id_plano"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "cd_nota",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "cd_nota"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "ano_mes",
+                "type": "TEXT",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "No",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "ano_mes"
+              },
+              {
+                "objectType": "TableField_SQLITE",
+                "name": "lg_outliervc",
+                "type": "INTEGER",
+                "size": -2147483648,
+                "scale": -2147483648,
+                "isNullable": "Yes",
+                "defaultValue": "",
+                "defaultValueType": "Others",
+                "collate": "",
+                "notNullOnConflict": "None",
+                "isAutoIncrement": false,
+                "oldName": "lg_outliervc"
+              }
+            ],
+            "indexes": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_SQLITE",
+              "name": "",
+              "fields": [
+                "id_plano",
+                "cd_nota",
+                "ano_mes"
+              ],
+              "onConflict": "None",
+              "oldName": ""
+            },
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_SQLITE",
+                "name": "fk_nt_vc_mes_nt_despesa_mes_1",
+                "fields": [
+                  "id_plano",
+                  "cd_nota",
+                  "ano_mes"
+                ],
+                "referencedSchema": "main",
+                "referencedTable": "nt_despesa_mes",
+                "referencedFields": [
+                  "id_plano",
+                  "cd_nota",
+                  "ano_mes"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "isDeferred": false,
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "ManyRelationship",
+                "oldName": ""
+              }
+            ],
+            "uniques": [],
+            "checks": [],
+            "triggers": []
+          }
+        ],
+        "views": []
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "name": "Diagram 1",
+      "paperWidth": 1,
+      "paperHeight": 1,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "default",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "geo_mun",
+          "x": 30,
+          "y": 200,
+          "width": 225,
+          "height": 191,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt",
+          "x": 540,
+          "y": 240,
+          "width": 150,
+          "height": 111,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt_despesa",
+          "x": 520,
+          "y": 720,
+          "width": 185,
+          "height": 191,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt_despesa_mes",
+          "x": 740,
+          "y": 30,
+          "width": 153,
+          "height": 151,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt_geo_mun",
+          "x": 310,
+          "y": 250,
+          "width": 176,
+          "height": 91,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt_geo_uf",
+          "x": 540,
+          "y": 110,
+          "width": 150,
+          "height": 91,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt_vc",
+          "x": 520,
+          "y": 420,
+          "width": 185,
+          "height": 251,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "nt_vc_mes",
+          "x": 740,
+          "y": 230,
+          "width": 165,
+          "height": 131,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "main",
+          "tableName": "rps_cadop",
+          "x": 960,
+          "y": 100,
+          "width": 212,
+          "height": 391,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        }
+      ],
+      "layers": [],
+      "relations": [
+        {
+          "name": "fk_geo_mun_nt_geo_mun_1",
+          "sourceTableName": "geo_mun",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 270,
+              "y": 300
+            },
+            {
+              "x": 295,
+              "y": 300
+            }
+          ],
+          "label": {
+            "x": 260,
+            "y": 252,
+            "width": 183,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_nt_nt_geo_mun_1",
+          "sourceTableName": "nt",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 525,
+              "y": 300
+            },
+            {
+              "x": 501,
+              "y": 300
+            }
+          ],
+          "label": {
+            "x": 535,
+            "y": 252,
+            "width": 137,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_nt_nt_geo_uf_1",
+          "sourceTableName": "nt",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 600,
+              "y": 225
+            },
+            {
+              "x": 600,
+              "y": 216
+            }
+          ],
+          "label": {
+            "x": 480,
+            "y": 185,
+            "width": 122,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_nt_vc_nt_despesa_1",
+          "sourceTableName": "nt_vc",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 600,
+              "y": 686
+            },
+            {
+              "x": 600,
+              "y": 705
+            }
+          ],
+          "label": {
+            "x": 602,
+            "y": 626,
+            "width": 154,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_rps_cadop_nt_vc_mes_1",
+          "sourceTableName": "rps_cadop",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 945,
+              "y": 300
+            },
+            {
+              "x": 920,
+              "y": 300
+            }
+          ],
+          "label": {
+            "x": 955,
+            "y": 252,
+            "width": 180,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_nt_nt_vc_mes_1",
+          "sourceTableName": "nt",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 705,
+              "y": 300
+            },
+            {
+              "x": 725,
+              "y": 300
+            }
+          ],
+          "label": {
+            "x": 695,
+            "y": 252,
+            "width": 126,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_nt_vc_mes_nt_despesa_mes_1",
+          "sourceTableName": "nt_vc_mes",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 820,
+              "y": 215
+            },
+            {
+              "x": 820,
+              "y": 196
+            }
+          ],
+          "label": {
+            "x": 822,
+            "y": 175,
+            "width": 220,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_nt_nt_vc_1",
+          "sourceTableName": "nt",
+          "sourceSchemaName": "main",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 600,
+              "y": 366
+            },
+            {
+              "x": 600,
+              "y": 405
+            }
+          ],
+          "label": {
+            "x": 509,
+            "y": 306,
+            "width": 93,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        }
+      ],
+      "viewRelations": []
+    }
+  ]
+}
